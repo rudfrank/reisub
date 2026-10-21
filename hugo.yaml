@@ -187,5 +187,5 @@ minify:
   minifyOutput: true  # (Default: false)
 
 caches:
-  images
+  images:
     dir: :cacheDir/images
