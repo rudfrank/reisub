@@ -185,3 +185,7 @@ security:
 minify: 
   disableXML: true  # (Default: false)
   minifyOutput: true  # (Default: false)
+
+caches:
+  images
+    dir: :cacheDir/images
