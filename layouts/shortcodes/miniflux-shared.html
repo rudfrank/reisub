@@ -1,0 +1,54 @@
+{{ $token := os.Getenv "MINIFLUX_TOKEN" }}
+{{ $base := "https://rss.frnk.hu" }}
+
+{{/* Fetch unread and read entries separately */}}
+{{ $urlUnread := printf "%s/v1/entries?status=unread&limit=500&order=published_at&direction=desc" $base }}
+{{ $urlRead := printf "%s/v1/entries?status=read&limit=500&order=published_at&direction=desc" $base }}
+
+{{ $headers := dict "headers" (dict "X-Auth-Token" $token) }}
+
+{{ $unreadResp := try (resources.GetRemote $urlUnread $headers) }}
+{{ $readResp := try (resources.GetRemote $urlRead $headers) }}
+
+{{/* Collect entries from successful requests */}}
+{{ $allEntries := slice }}
+{{ with $unreadResp }}
+  {{ with .Value }}
+    {{ $data := .Content | transform.Unmarshal }}
+    {{ $allEntries = $allEntries | append $data.entries }}
+  {{ end }}
+{{ end }}
+{{ with $readResp }}
+  {{ with .Value }}
+    {{ $data := .Content | transform.Unmarshal }}
+    {{ $allEntries = $allEntries | append $data.entries }}
+  {{ end }}
+{{ end }}
+
+{{/* Filter only entries with a non-empty share_code */}}
+{{ $sharedEntries := where $allEntries "share_code" "ne" "" }}
+
+{{ if len $sharedEntries }}
+  <ul class="shared-list">
+  {{ range $sharedEntries }}
+    <li>
+      <div class="shared-item">
+        <a class="shared-title" href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
+        {{ with .author }}<span class="shared-author">by {{ . }}</span>{{ end }}
+        <time class="shared-date" datetime="{{ .published_at }}">
+          {{ dateFormat "Jan 2, 2006" .published_at }}
+        </time>
+        <a class="shared-link" href="{{ $base }}/share/{{ .share_code }}" target="_blank" rel="noopener">
+          🔗 Public share
+        </a>
+        {{ with .content }}
+          <p class="shared-excerpt">{{ . | plainify | truncate 150 }}</p>
+        {{ end }}
+      </div>
+    </li>
+  {{ end }}
+  </ul>
+{{ else }}
+  <p>No shared items yet.</p>
+{{ end }}
+

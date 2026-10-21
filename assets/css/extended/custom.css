@@ -1,0 +1,72 @@
+.shared-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.shared-item {
+  background: var(--entry);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 3px solid var(--primary);
+}
+
+.shared-title {
+  font-weight: 600;
+  font-size: 1.1em;
+  display: block;
+}
+
+.shared-author,
+.shared-date {
+  color: var(--secondary);
+  font-size: 0.85em;
+  margin-right: 0.7em;
+}
+
+.shared-link {
+  display: inline-block;
+  font-size: 0.8em;
+  text-decoration: none;
+  margin-top: 0.3rem;
+  color: var(--primary);
+}
+
+.shared-excerpt {
+  margin-top: 0.5rem;
+  color: var(--content);
+  font-size: 0.9em;
+}
+
+/* Reduce profile hero height so posts appear sooner */
+.profile {
+  min-height: auto;
+  padding: 2rem 0;
+}
+
+.profile-tags {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.profile-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85em;
+  border-radius: var(--radius);
+  background: var(--entry);
+  border: 1px solid var(--border);
+  color: var(--primary);
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.profile-tag:hover {
+  background: var(--primary);
+  color: var(--theme);
+  border-color: var(--primary);
+}
+

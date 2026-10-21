@@ -1,0 +1,60 @@
+{{- define "main" }}
+
+{{- if .IsHome }}
+
+  {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
+  {{- $paginator := .Paginate $pages }}
+
+  {{/* Show the profile hero only on the first page */}}
+  {{- if and site.Params.profileMode.enabled (eq $paginator.PageNumber 1) }}
+    {{- partial "index_profile.html" . }}
+  {{- end }}
+
+  {{/* Show the home info block (if you have homeInfoParams) */}}
+  {{- if and site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
+    {{- partial "home_info.html" . }}
+  {{- end }}
+
+  {{/* Post list */}}
+  <section class="profile-posts">
+    {{- range $paginator.Pages }}
+      <article class="post-entry">
+        <header class="entry-header">
+          <h2 class="entry-hint-parent">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h2>
+        </header>
+        <section class="entry-content">
+          <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}…{{ end }}</p>
+        </section>
+        <footer class="entry-footer">
+          <time>{{ .Date.Format "January 2, 2006" }}</time>
+        </footer>
+      </article>
+    {{- end }}
+  </section>
+
+  {{/* Pagination */}}
+  {{- if gt $paginator.TotalPages 1 }}
+  <footer class="page-footer">
+    <nav class="pagination">
+      {{- if $paginator.HasPrev }}<a class="prev" href="{{ $paginator.Prev.URL }}">« Prev</a>{{- end }}
+      {{- if $paginator.HasNext }}<a class="next" href="{{ $paginator.Next.URL }}">Next »</a>{{- end }}
+    </nav>
+  </footer>
+  {{- end }}
+
+{{- else }}
+
+  {{/* For non-home pages, keep PaperMod’s default behavior */}}
+  {{- if .Content }}
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+  {{- end }}
+
+{{- end }}
+
+{{- end }}
+
