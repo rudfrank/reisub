@@ -8,6 +8,7 @@ editPost:
   disabled: true
 ShowReadingTime: false
 ShowPostNavLinks: false
+hideAuthor: true
 ---
 
 Noteworthy articles from my RSS reader.

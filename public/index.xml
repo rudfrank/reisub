@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>$ reisub_</title>
-    <link>http://localhost:1313/</link>
+    <link>https://reisub.eu/</link>
     <description>Recent content on $ reisub_</description>
     <image>
       <title>$ reisub_</title>
-      <url>http://localhost:1313/images/papermod-cover.png</url>
-      <link>http://localhost:1313/images/papermod-cover.png</link>
+      <url>https://reisub.eu/images/papermod-cover.png</url>
+      <link>https://reisub.eu/images/papermod-cover.png</link>
     </image>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>2026 Rudolf D. Frank</copyright>
     <lastBuildDate>Tue, 20 Oct 2026 22:32:34 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://reisub.eu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fix missing file-picker on niri on Void</title>
-      <link>http://localhost:1313/posts/filepicker/</link>
+      <link>https://reisub.eu/posts/filepicker/</link>
       <pubDate>Tue, 20 Oct 2026 22:32:34 +0200</pubDate>
-      <guid>http://localhost:1313/posts/filepicker/</guid>
+      <guid>https://reisub.eu/posts/filepicker/</guid>
       <description>Using niri on wayland, no filepicker appears eg. in Chromium. Let&amp;#39;s fix it!</description>
     </item>
     <item>
       <title>Noteworthy Articles</title>
-      <link>http://localhost:1313/shared/</link>
+      <link>https://reisub.eu/shared/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/shared/</guid>
+      <guid>https://reisub.eu/shared/</guid>
       <description>&lt;p&gt;Noteworthy articles from my RSS reader.
 
 
@@ -43,52 +43,19 @@
 
 
   
-    
-    
-  
 
 
   
-    
-    
-  
 
 
 
 
 
 
-  &lt;ul class=&#34;shared-list&#34;&gt;
-  
-    &lt;li&gt;
-      &lt;div class=&#34;shared-item&#34;&gt;
-        &lt;a class=&#34;shared-title&#34; href=&#34;https://www.privacyguides.org/news/2026/10/20/thousand-of-android-phones-shipped-with-malware/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Thousand of Android Phones Shipped With Malware&lt;/a&gt;
-        &lt;span class=&#34;shared-author&#34;&gt;by Fria Reyes&lt;/span&gt;
-        &lt;time class=&#34;shared-date&#34; datetime=&#34;2026-10-20T23:24:18&amp;#43;02:00&#34;&gt;
-          Oct 20, 2026
-        &lt;/time&gt;
-        &lt;a class=&#34;shared-link&#34; href=&#34;https://rss.frnk.hu/share/72e64e01a5e76e0c02ebfc13e34b0f338d0b8b6a&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
-          🔗 Public share
-        &lt;/a&gt;
-        
-          &lt;p class=&#34;shared-excerpt&#34;&gt;Researchers at Bitdefender discovered a malicious Android system application shipped by default in thousands of cheaper Android phones in more than …&lt;/p&gt;
-        
-      &lt;/div&gt;
-    &lt;/li&gt;
-  
-    &lt;li&gt;
-      &lt;div class=&#34;shared-item&#34;&gt;
-        &lt;a class=&#34;shared-title&#34; href=&#34;https://www.schneier.com/blog/archives/2026/10/cyberattack-on-connected-fridges-in-france.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cyberattack on Connected Fridges in France&lt;/a&gt;
-        &lt;span class=&#34;shared-author&#34;&gt;by Bruce Schneier&lt;/span&gt;
-        &lt;time class=&#34;shared-date&#34; datetime=&#34;2026-10-14T16:10:22&amp;#43;02:00&#34;&gt;
-          Oct 14, 2026
-        &lt;/time&gt;
-        &lt;a class=&#34;shared-link&#34; href=&#34;https://rss.frnk.hu/share/dc9801a8229695fe763ba0583ff4f0c6e3fcece5&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
-          🔗 Public share
-        &lt;/a&gt;
-        
-          &lt;p class=&#34;shared-excerpt&#34;&gt;Another IoT cyberattack, this one in France:
-Hackers gained control of the software that regulates the temperatures of the refrigeration units, …&lt;/p&gt;</description>
+  &lt;p&gt;No shared items yet.&lt;/p&gt;
+
+
+&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

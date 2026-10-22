@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on $ reisub_</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://reisub.eu/tags/</link>
     <description>Recent content in Tags on $ reisub_</description>
     <image>
       <title>$ reisub_</title>
-      <url>http://localhost:1313/images/papermod-cover.png</url>
-      <link>http://localhost:1313/images/papermod-cover.png</link>
+      <url>https://reisub.eu/images/papermod-cover.png</url>
+      <link>https://reisub.eu/images/papermod-cover.png</link>
     </image>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>2026 Rudolf D. Frank</copyright>
     <lastBuildDate>Tue, 20 Oct 2026 22:32:34 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://reisub.eu/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux</title>
-      <link>http://localhost:1313/tags/linux/</link>
+      <link>https://reisub.eu/tags/linux/</link>
       <pubDate>Tue, 20 Oct 2026 22:32:34 +0200</pubDate>
-      <guid>http://localhost:1313/tags/linux/</guid>
+      <guid>https://reisub.eu/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Tips</title>
-      <link>http://localhost:1313/tags/tips/</link>
+      <link>https://reisub.eu/tags/tips/</link>
       <pubDate>Tue, 20 Oct 2026 22:32:34 +0200</pubDate>
-      <guid>http://localhost:1313/tags/tips/</guid>
+      <guid>https://reisub.eu/tags/tips/</guid>
       <description></description>
     </item>
     <item>
       <title>Void</title>
-      <link>http://localhost:1313/tags/void/</link>
+      <link>https://reisub.eu/tags/void/</link>
       <pubDate>Tue, 20 Oct 2026 22:32:34 +0200</pubDate>
-      <guid>http://localhost:1313/tags/void/</guid>
+      <guid>https://reisub.eu/tags/void/</guid>
       <description></description>
     </item>
     <item>
       <title>Wayland</title>
-      <link>http://localhost:1313/tags/wayland/</link>
+      <link>https://reisub.eu/tags/wayland/</link>
       <pubDate>Tue, 20 Oct 2026 22:32:34 +0200</pubDate>
-      <guid>http://localhost:1313/tags/wayland/</guid>
+      <guid>https://reisub.eu/tags/wayland/</guid>
       <description></description>
     </item>
   </channel>

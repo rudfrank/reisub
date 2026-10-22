@@ -3,7 +3,7 @@ title: 'Fix missing file-picker on niri on Void'
 description: "Using niri on wayland, no filepicker appears eg. in Chromium. Let's fix it!"
 date: '2026-10-20T22:32:34+02:00'
 tags: ["linux","void","wayland","tips"]
-author: "rdf"
+author: "rudfrank"
 draft: false
 showToc: false
 ---

@@ -2,34 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://reisub.eu/</loc>
     <lastmod>2026-10-20T22:32:34+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/filepicker/</loc>
+    <loc>https://reisub.eu/posts/filepicker/</loc>
     <lastmod>2026-10-20T22:32:34+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/linux/</loc>
+    <loc>https://reisub.eu/tags/linux/</loc>
     <lastmod>2026-10-20T22:32:34+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://reisub.eu/posts/</loc>
     <lastmod>2026-10-20T22:32:34+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://reisub.eu/tags/</loc>
     <lastmod>2026-10-20T22:32:34+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tips/</loc>
+    <loc>https://reisub.eu/tags/tips/</loc>
     <lastmod>2026-10-20T22:32:34+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/void/</loc>
+    <loc>https://reisub.eu/tags/void/</loc>
     <lastmod>2026-10-20T22:32:34+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/wayland/</loc>
+    <loc>https://reisub.eu/tags/wayland/</loc>
     <lastmod>2026-10-20T22:32:34+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/archives/</loc>
+    <loc>https://reisub.eu/archives/</loc>
   </url><url>
-    <loc>http://localhost:1313/shared/</loc>
+    <loc>https://reisub.eu/shared/</loc>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>https://reisub.eu/search/</loc>
   </url>
 </urlset>
