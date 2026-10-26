@@ -1,6 +1,6 @@
 baseURL: https://reisub.eu/
 locale: en-us
-title: "$ reisub_"
+title: "reisub"
 paginate: 5
 copyright: "© 2026 Rudolf D. Frank"
 theme: ["PaperMod"]
@@ -81,7 +81,7 @@ params:
 
   profileMode:
     enabled: true
-    title: "``$ reisub_``"
+    title: "reisub<blink>_</blink>"
     subtitle: "``# Have you tried turning off and on again?``"
     imageUrl: "images/avatar.png"
     imageTitle: avatar

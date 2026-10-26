@@ -1,3 +1,83 @@
+/* custom fonts */
+/* Self-hosted fonts */
+@font-face {
+  font-family: 'VT323';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/vt323-v18-latin_latin-ext-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-v20-latin_latin-ext-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/inter-v20-latin_latin-ext-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/inter-v20-latin_latin-ext-700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-v20-latin_latin-ext-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/inter-v20-latin_latin-ext-500italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/inter-v20-latin_latin-ext-700italic.woff2') format('woff2');
+}
+
+
+:root {
+  --font: 'Inter', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+  --geekyfont: 'VT323', monospace;
+}
+body {
+  font-family: var(--font);
+  font-optical-sizing: auto;
+}
+.post-content {
+  font-size: 1rem;
+}
+header, .header, .profile, code, pre, kbd, samp, .post-tags, .terms-tags {
+  font-family: var(--geekyfont);
+  text-shadow : 0 0 1px var(--secondary);
+  font-size: 1.25rem;
+}
+.post-content code {font-size:1rem;}
+/* custom theming */
+body.list {
+  background-color: var(--theme);
+}
+
 .shared-list {
   list-style: none;
   padding-left: 0;
@@ -64,9 +144,146 @@
   transition: background 0.2s, border-color 0.2s;
 }
 
-.profile-tag:hover {
+.profile-tag:hover, .button:hover {
   background: var(--primary);
   color: var(--theme);
   border-color: var(--primary);
+}
+
+/*scanlines anim*/
+.profile, .logo, header h1 {
+    overflow: hidden;
+    position: relative;
+}
+.profile::before, .profile::after, .logo::before, .logo::after,header h1::after {
+    display: block;
+    pointer-events: none;
+    content: "";
+    position: absolute;
+}
+.profile::before, .logo::before {
+    width: 100%;
+    height: 2px;
+    z-index: 2147483649;
+    background-color: var(--theme);
+    opacity: 0.66;
+    animation: scanline 6s linear infinite;
+}
+.profile::after, .logo::after, header h1::after {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2147483648;
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        var(--theme) 51%
+    );
+    background-size: 100% 4px;
+    animation: scanlines 1s steps(60) infinite;
+    opacity: 0.33;
+}
+
+/* animate scanline */
+@keyframes scanline {
+    0% {
+        transform: translate3d(0, 200000%, 0);
+    }
+}
+@keyframes scanlines {
+    0% {
+        background-position: 0 50%;
+    }
+}
+
+blink {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+header h1::before {
+    content: "#";
+    color: var(--secondary);
+    display: inline-block;
+    padding-right: 0.5ex;
+}
+.profile h1::before, .logo a::before {
+    content: "$";
+    color: var(--secondary);
+    display: inline-block;
+    padding-right: 0.5ex;
+}
+
+.logo a::after {
+    content: "_";
+    display: inline;
+    margin-left: -1ex;
+    animation: blinker 1s linear infinite;
+}
+.post-title {
+    text-align:left;
+    display:block;
+}
+
+/* disable rounded corners */
+:root {
+  --radius: 0px;
+}
+
+.post-content pre, pre {
+  background: var(--code-bg);
+  border-radius: 0;
+}
+
+/* grid background */
+main {
+  background-image:
+    linear-gradient(rgba(0, 255, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 0, 0.03) 1px, transparent 1px);
+  background-size: 13px 13px;
+  background-position: 6.5px 10px;
+}
+
+
+/* pseudo-3D effect for button-like elements */
+.post-tags a,
+.terms-tags a,
+.pagination a,
+.share-buttons a,
+main button,
+input[type="submit"],
+.top-link, .button, .profile-tag, .post-entry {
+  box-shadow: 3px 3px 0 var(--border);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* pressed state: element moves into the shadow */
+.post-tags a:active,
+.terms-tags a:active,
+.pagination a:active,
+.share-buttons a:active,
+main button:active,
+input[type="submit"]:active,
+.top-link:active, .button:active, .profile-tag:active, .post-entry:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0 0 0 var(--border);
+}
+
+/* hover raises the element slightly for a more tactile feel */
+.post-tags a:hover,
+.terms-tags a:hover,
+.pagination a:hover,
+.share-buttons a:hover,
+main button:hover,
+input[type="submit"]:hover,
+.top-link:hover, .button:hover, .profile-tag:hover, .post-entry:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--border);
 }
 

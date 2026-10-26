@@ -1,5 +1,0 @@
-# $ reisub_
-- [Noteworthy Articles](https://reisub.eu/shared/)
-
-## Posts
-- [Fix missing file-picker on niri on Void](https://reisub.eu/posts/filepicker/)
