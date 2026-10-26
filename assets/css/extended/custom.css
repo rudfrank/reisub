@@ -67,11 +67,24 @@ body {
 .post-content {
   font-size: 1rem;
 }
-header, .header, .profile, code, pre, kbd, samp, .post-tags, .terms-tags {
+header, .header, .profile, code, pre, kbd, samp, .post-tags, .terms-tags, .toc, .series-container {
   font-family: var(--geekyfont);
   text-shadow : 0 0 1px var(--secondary);
   font-size: 1.25rem;
 }
+h1, h2, h3, h4, h5, h6 {font-family: var(--geekyfont)}
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
 .post-content code {font-size:1rem;}
 /* custom theming */
 body.list {
@@ -285,5 +298,21 @@ input[type="submit"]:hover,
 .top-link:hover, .button:hover, .profile-tag:hover, .post-entry:hover {
   transform: translate(-1px, -1px);
   box-shadow: 4px 4px 0 var(--border);
+}
+
+details.series-container {
+    margin-bottom: var(--content-gap);
+    background: var(--tertiary);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+ 
+details.series-container summary {
+    padding: 0.3rem 1.2rem;
+    border-radius: var(--radius);
+}
+.series-container a:hover {
+    text-underline-offset: 0.3rem;
+    text-decoration: underline;
 }
 

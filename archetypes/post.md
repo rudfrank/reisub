@@ -3,7 +3,7 @@ title: '{{ replace .File.ContentBaseName "-" " " | title }}'
 description: ""
 date: '{{ .Date }}'
 tags: ["linux"]
-author: "rdf"
+author: "rudfrank"
 draft: true
 showToc: false
 ---

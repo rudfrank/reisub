@@ -57,7 +57,7 @@
           {{- end }}
 
           <div class="profile-tags">
-            {{- range sort $tagSlice "count" "desc" | first 10 }}
+            {{- range sort $tagSlice "count" "desc" | first 5 }}
               {{- $tag := .name }}
               <a class="profile-tag" href="{{ "tags/" | relLangURL }}{{ $tag | urlize }}">
                 {{ $tag }}

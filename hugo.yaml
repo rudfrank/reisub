@@ -21,7 +21,7 @@ languages:
     taxonomies:
       tag: tags
 #      category: categories
-#      series: series
+      series: series
     menu:
       main:
         - name: posts

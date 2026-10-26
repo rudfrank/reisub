@@ -1,0 +1,29 @@
+{{ $series := slice }}
+{{ if isset .Params "series" }}
+    {{ $postMainSeries := (index .Params.series 0) }}
+    {{ $series = (where .Site.RegularPages "Params.series" "intersect" (slice $postMainSeries)).ByDate }}
+    {{ $seriesLen := $series | len }}
+
+    {{ $seriesTitle := $postMainSeries }}
+    {{ with .Site.GetPage (printf "/series/%s" ($postMainSeries | urlize)) }}
+        {{ with .Title }}
+            {{ $seriesTitle = . }}
+        {{ end }}
+    {{ end }}
+
+    {{ if gt $seriesLen 1 }}
+    <details class="series-container" {{ if lt $seriesLen 5 }}open{{ end }}>
+        <summary>
+            <span class="title">Series: {{ $seriesTitle }}</span>
+        </summary>
+        <div class="inner">
+            <ul class="series-list">
+                {{- range $post := $series -}}
+                <li><a href="{{$post.RelPermalink}}">{{ $post.Params.title }}</a></li>
+                {{ end }}
+            </ul>
+        </div>
+    </details>
+    {{ end }}
+{{ end }}
+
