@@ -104,7 +104,7 @@ params:
       url: "https://www.linkedin.com/in/rudolffrank"
 
   editPost:
-    URL: "https://github.com/rudfrank/reisub/edit/main/content"
+    URL: "https://github.com/rudfrank/reisub/edit/master/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
