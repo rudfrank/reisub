@@ -1,3 +1,12 @@
+/* accent on tertiary text */
+:root[data-theme="dark"] {
+    --tertiary: #4d7c5a;      /* muted retro green for light mode */
+}
+
+:root {
+    --tertiary: #6fae8e;      /* slightly brighter green for dark mode */
+}
+
 /* custom fonts */
 /* Self-hosted fonts */
 @font-face {
@@ -72,7 +81,7 @@ header, .header, .profile, code, pre, kbd, samp, .post-tags, .terms-tags, .toc, 
   text-shadow : 0 0 1px var(--secondary);
   font-size: 1.25rem;
 }
-h1, h2, h3, h4, h5, h6 {font-family: var(--geekyfont)}
+h1, h2, h3, h4, h5, h6, footer nav {font-family: var(--geekyfont); font-weight: bold;}
 h1 {
   font-size: 1.8rem;
 }
@@ -163,6 +172,22 @@ body.list {
   border-color: var(--primary);
 }
 
+/* scanlines */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  z-index: 9999;
+}
+
 /*scanlines anim*/
 .profile, .logo, header h1 {
     overflow: hidden;
@@ -177,7 +202,7 @@ body.list {
 .profile::before, .logo::before {
     width: 100%;
     height: 2px;
-    z-index: 2147483649;
+    z-index: 9998;
     background-color: var(--theme);
     opacity: 0.66;
     animation: scanline 6s linear infinite;
@@ -187,7 +212,7 @@ body.list {
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 2147483648;
+    z-index: 9997;
     background: linear-gradient(
         to bottom,
         transparent 50%,
@@ -222,13 +247,13 @@ blink {
 
 header h1::before {
     content: "#";
-    color: var(--secondary);
+    color: var(--tertiary);
     display: inline-block;
     padding-right: 0.5ex;
 }
 .profile h1::before, .logo a::before {
     content: "$";
-    color: var(--secondary);
+    color: var(--tertiary);
     display: inline-block;
     padding-right: 0.5ex;
 }
@@ -315,4 +340,5 @@ details.series-container summary {
     text-underline-offset: 0.3rem;
     text-decoration: underline;
 }
+
 
