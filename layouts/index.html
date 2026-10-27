@@ -29,7 +29,9 @@
           <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}…{{ end }}</p>
         </section>
         <footer class="entry-footer">
-          <time>{{ .Date.Format "January 2, 2006" }}</time>
+            {{- if not .Date.IsZero -}}
+            <time>{{ .Date | time.Format (default ":date_long" site.Params.DateFormat) }}</time>
+            {{- end }}
         </footer>
       </article>
     {{- end }}

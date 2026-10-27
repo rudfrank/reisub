@@ -64,8 +64,10 @@ Let's override the index.html with `layouts/index.html` to show both.
           <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}…{{ end }}</p>
         </section>
         <footer class="entry-footer">
-          <time>{{ .Date.Format "January 2, 2006" }}</time>
-        </footer>
+            {{- if not .Date.IsZero -}} 
+            <time>{{ .Date | time.Format (default ":date_long" site.Params.DateFormat) }}</time>
+            {{- end }}
+        </footer> 
       </article>
     {{- end }}
   </section>
