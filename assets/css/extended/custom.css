@@ -81,7 +81,7 @@ header, .header, .profile, code, pre, kbd, samp, .post-tags, .terms-tags, .toc, 
   text-shadow : 0 0 1px var(--secondary);
   font-size: 1.25rem;
 }
-h1, h2, h3, h4, h5, h6, footer nav {font-family: var(--geekyfont); font-weight: bold;}
+h1, h2, h3, h4, h5, h6, footer nav, .entry-footer, .archive-meta {font-family: var(--geekyfont); font-weight: bold;}
 h1 {
   font-size: 1.8rem;
 }
