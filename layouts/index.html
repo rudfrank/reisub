@@ -28,11 +28,12 @@
         <section class="entry-content">
           <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}…{{ end }}</p>
         </section>
+        {{- if not (.Param "hideMeta") }}
         <footer class="entry-footer">
-            {{- if not .Date.IsZero -}}
-            <time>{{ .Date | time.Format (default ":date_long" site.Params.DateFormat) }}</time>
-            {{- end }}
+          {{- partial "post_meta.html" . -}}
         </footer>
+        {{- end }}
+         <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
       </article>
     {{- end }}
   </section>
