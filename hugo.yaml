@@ -16,7 +16,7 @@ mainsections: ["posts"]
 
 languages:
   en:
-    languageName: "EN"
+    label: "EN"
     weight: 1
     taxonomies:
       tag: tags
