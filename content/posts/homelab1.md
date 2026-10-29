@@ -85,7 +85,7 @@ Refresh the cache: `fwupdmgr refresh`
 Upgrade: `fwupdmgr upgrade`, reboot if needed.
 
 ### web setup
-Login to the webui in browser: https://[node-ip]:8006
+Login to the webui in browser: `https://[node-ip]:8006`
 In the *Server View* select the current node under *Datacenter*.
 
 #### import certificate
@@ -118,9 +118,9 @@ Note: If you setup TFA/MFA to your proxmox user, you have to use the cli to join
 `pvecm add [node1-fqdn] -link0 [node2-ip] --use_ssh`, eg. `pvecm add pve.lab.mydomain.com -link0 192.168.0.22 --use_ssh`
 
 ---
-We have our cluster ready. From now on, I can see and manage* node 2 (pve2)* via the *node 1 (pve)* web ui, under *Datacenter*.
+We have our cluster ready. From now on, I can see and manage *node 2 (pve2)* via the *node 1 (pve)* web ui, under *Datacenter*.
 
-I setup my disks and storages via the web ui and define my resource pools and add users and permissions. At  minimum, I define a vmmanager group and a normal user paired with it. 
+I setup my disks and storages via the web ui and define my resource pools and add users and permissions. At minimum, I define a vmmanager group and a normal user paired with it. 
 
 In the next part we will start to use the cluster and deploy vms and some lightweight lxc containers.
 
